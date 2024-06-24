@@ -8,16 +8,22 @@ Welcome to the MyToken Smart Contract. This contract is a basic implementation o
 Features
 
 1.Token Name: NEXA
+
 2.Token Symbol: EON
+
 3.Total Supply: The aggregate amount of tokens in circulation.
+
 4.Balances: A mapping that records token balances for each address.
 
 Contract Specifications
 
 Public Variables
 1.tokenName: The name of the token.
+
 2.tokenAbbry: The abbreviation of the token.
+
 3.totalSupply: The total number of tokens issued.
+
 4.balances: A mapping that tracks the token balance for each address.
 
 Functions
@@ -60,8 +66,13 @@ Deployment
 Follow these steps to deploy the MyToken contract:
 
 1.Install Node.js.
+
 2.Install Truffle and Ganache.
+
 3.Initialize a new Truffle project:
+
 4.Add the MyToken contract code to a new file named MyToken.sol in the contracts directory.
+
 5.Compile and deploy the contract:
+
 6.Use the Truffle console to interact with the contract:
