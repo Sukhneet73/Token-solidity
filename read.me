@@ -1,1 +1,76 @@
+MyToken Smart Contract
+Introduction
+Welcome to the MyToken Smart Contract. This contract is a basic implementation of an ERC-20 like token using Solidity. The token is named "NEXA" with the abbreviation "EON".
 
+Features
+Token Name: NEXA
+Token Symbol: EON
+Total Supply: The aggregate amount of tokens in circulation.
+Balances: A mapping that records token balances for each address.
+Contract Specifications
+Public Variables
+tokenName: The name of the token.
+tokenAbbry: The abbreviation of the token.
+totalSupply: The total number of tokens issued.
+balances: A mapping that tracks the token balance for each address.
+Functions
+Mint Function
+This function creates new tokens and assigns them to a specified address, increasing the total supply.
+
+solidity
+Copy code
+function mint(address _address, uint _value) public
+Parameters:
+_address: The recipient address of the newly minted tokens.
+_value: The number of tokens to mint.
+Burn Function
+This function removes tokens from a specified address, reducing the total supply, provided the address has sufficient tokens.
+
+solidity
+Copy code
+function burn(address _address, uint _value) public
+Parameters:
+_address: The address from which tokens will be burned.
+_value: The number of tokens to burn.
+How to Use
+Minting Tokens
+To mint tokens, call the mint function with the recipient address and the amount of tokens to mint.
+
+Example:
+
+solidity
+Copy code
+MyToken.mint(0xYourAddress, 100);
+This mints 100 tokens to 0xYourAddress.
+
+Burning Tokens
+To burn tokens, call the burn function with the address from which to burn tokens and the amount of tokens to burn.
+
+Example:
+
+solidity
+Copy code
+MyToken.burn(0xYourAddress, 50);
+This burns 50 tokens from 0xYourAddress if the address holds at least 50 tokens.
+
+Deployment
+Follow these steps to deploy the MyToken contract:
+
+Install Node.js.
+Install Truffle and Ganache.
+Initialize a new Truffle project:
+bash
+Copy code
+mkdir MyToken
+cd MyToken
+truffle init
+Add the MyToken contract code to a new file named MyToken.sol in the contracts directory.
+Compile and deploy the contract:
+bash
+Copy code
+truffle compile
+truffle migrate
+Use the Truffle console to interact with the contract:
+bash
+Copy code
+truffle console
