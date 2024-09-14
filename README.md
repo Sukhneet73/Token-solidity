@@ -1,78 +1,63 @@
-MyToken Smart Contract
+Nexa Smart Contract
+Nexa  is a simple ERC20-like token implemented in Solidity. This contract allows for minting and burning of tokens. It is designed to be a straightforward example of a custom token on the Ethereum blockchain.
 
-
-Introduction
-
-Welcome to the MyToken Smart Contract. This contract is a basic implementation of an ERC-20 like token using Solidity. The token is named "NEXA" with the abbreviation "EON".
-
-Features
-
-1.Token Name: NEXA
-
-2.Token Symbol: EON
-
-3.Total Supply: The aggregate amount of tokens in circulation.
-
-4.Balances: A mapping that records token balances for each address.
-
-Contract Specifications
-
-Public Variables
-1.tokenName: The name of the token.
-
-2.tokenAbbry: The abbreviation of the token.
-
-3.totalSupply: The total number of tokens issued.
-
-4.balances: A mapping that tracks the token balance for each address.
-
+Token Details
+Name: NEXA
+Symbol: EON
+Decimals: 18 (standard for ERC20 tokens)
+Total Supply: Initially 0
+Contract Features
 Functions
 
-Mint Function
-This function creates new tokens and assigns them to a specified address, increasing the total supply.
+Minting Tokens The mint function allows the creation of new tokens and assigns them to a specified address.
 
-function mint(address _address, uint _value) public
-
-Parameters:
-`_address`: The recipient address of the newly minted tokens.
-`_value`: The number of tokens to mint.
-
-Burn Function
-This function removes tokens from a specified address, reducing the total supply, provided the address has sufficient tokens.
-
-function burn(address _address, uint _value) public
-
+function mint(address _to, uint256 _value) public;
 
 Parameters:
-_address: The address from which tokens will be burned.
-_value: The number of tokens to burn.
 
-How to Use
+_to: The address to receive the minted tokens. _value: The number of tokens to mint.
 
-Minting Tokens
+Burning Tokens The burn function allows the destruction of tokens from a specified address, reducing the total supply.
 
-To mint tokens, call the `mint` function with the recipient address and the amount of tokens to mint.
-MyToken.mint(0xYourAddress, 100);
+function burn(address _to, uint256 _value) public;
+
+Parameters:
+
+_to: The address from which tokens will be burned. _value: The number of tokens to burn.
+
+Usage Deployment To deploy the `nexa` contract, you will need an Ethereum development environment such as Truffle, Hardhat, or Remix. Below is a basic example using Remix:
+
+Open Remix. 1.Create a new file and paste the DipikaToken contract code.
+
+2.Compile the contract.
+
+3.Deploy the contract using the "Deploy" button in Remix.
+
+Interacting with the Contract Once deployed, you can interact with the contract using web3.js, ethers.js, or directly via Remix.
+
+Mint Tokens To mint tokens, call the mint function with the recipient's address and the amount of tokens to mint.
+
+Example using Remix:
+
+1.Select the deployed `Nexa` contract.
+
+2.Select the mint function.
+
+3.Enter the recipient's address and the amount of tokens to mint.
+
+4.Click "Transact" to execute the transaction.
+
+Burn Tokens To burn tokens, call the burn function with the address from which to burn tokens and the amount to burn.
+
+Example using Remix:
+
+1.Select the deployed Nexa contract.
+
+2.Select the burn function.
+
+3.Enter the address from which to burn tokens and the amount to burn.
+
+4.Click "Transact" to execute the transaction.
 
 
-Burning Tokens
 
-To burn tokens, call the `burn` function with the address from which to burn tokens and the amount of tokens to burn.
-MyToken.burn(0xYourAddress, 50);
-
-
-Deployment
-
-Follow these steps to deploy the MyToken contract:
-
-1.Install Node.js.
-
-2.Install Truffle and Ganache.
-
-3.Initialize a new Truffle project:
-
-4.Add the MyToken contract code to a new file named MyToken.sol in the contracts directory.
-
-5.Compile and deploy the contract:
-
-6.Use the Truffle console to interact with the contract:
