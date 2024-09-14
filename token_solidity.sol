@@ -18,7 +18,7 @@ contract MyToken
 {
   //public variables here 
   string  public tokenName="NEXA";
-  string  public tokenAbbry="EON";
+  string  public symbol="EON";
   uint public totalSupply=0;
 
   //mapping variables here
