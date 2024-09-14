@@ -5,10 +5,15 @@
 Token Details
 
 Name: NEXA
+
 Symbol: EON
+
 Decimals: 18 (standard for ERC20 tokens)
+
 Total Supply: Initially 0
+
 Contract Features
+
 Functions
 
 Minting Tokens The mint function allows the creation of new tokens and assigns them to a specified address.
