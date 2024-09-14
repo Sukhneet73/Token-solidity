@@ -1,5 +1,5 @@
-Nexa Smart Contract
-Nexa  is a simple ERC20-like token implemented in Solidity. This contract allows for minting and burning of tokens. It is designed to be a straightforward example of a custom token on the Ethereum blockchain.
+`My Contract` Smart Contract
+`NEXA`  is a simple ERC20-like token implemented in Solidity. This contract allows for minting and burning of tokens. It is designed to be a straightforward example of a custom token on the Ethereum blockchain.
 
 Token Details
 Name: NEXA
@@ -27,7 +27,7 @@ _to: The address from which tokens will be burned. _value: The number of tokens 
 
 Usage Deployment To deploy the `nexa` contract, you will need an Ethereum development environment such as Truffle, Hardhat, or Remix. Below is a basic example using Remix:
 
-Open Remix. 1.Create a new file and paste the DipikaToken contract code.
+Open Remix. 1.Create a new file and paste the `MY Contract` contract code.
 
 2.Compile the contract.
 
@@ -39,7 +39,7 @@ Mint Tokens To mint tokens, call the mint function with the recipient's address 
 
 Example using Remix:
 
-1.Select the deployed `Nexa` contract.
+1.Select the deployed `My Con` contract.
 
 2.Select the mint function.
 
