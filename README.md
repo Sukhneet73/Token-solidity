@@ -1,70 +1,17 @@
-`MyToken` Smart Contract
+##EVM-Project This project demonstrates how to create a custom token on the Ethereum blockchain using Solidity, the primary programming language for smart contracts on Ethereum. The repository includes the Solidity source code, deployment scripts, and comprehensive instructions on how to set up and deploy your own token.
 
-`NEXA`  is a simple ERC20-like token implemented in Solidity. This contract allows for minting and burning of tokens. It is designed to be a straightforward example of a custom token on the Ethereum blockchain.
+##Description This project is an in-depth guide to creating a custom token on the Ethereum blockchain using Solidity. It covers the entire process from writing the Solidity code to deploying the token on the Ethereum network. The project aims to provide a clear understanding of the fundamental concepts of smart contracts and token creation, making it easier for developers to create their own tokens for various applications such as Initial Coin Offerings (ICOs), decentralized applications (dApps), and other blockchain-based projects.
 
-Token Details
+##Getting Started Executing program To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-Name: NEXA
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., MyToken.sol). Copy and paste the following code into the file: contract MyToken { //public variables here string public tokenName="NEXA"; string public tokenAbbry="EON"; uint public totalSupply=0; //mapping variables here mapping(address => uint) public balances; //mint function function mint(address _address,uint _value) public { totalSupply += _value; balances[_address]+= _value; } //burn function function burn(address _address,uint _value) public { if(balances[_address] >= _value) { totalSupply -= _value; balances[_address]-= _value;     }   }    }
 
-Symbol: EON
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile MyToken.sol" button.
 
-Decimals: 18 (standard for ERC20 tokens)
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "MyToken" contract from the dropdown menu, and then click on the "Deploy" button.
 
-Total Supply: Initially 0
+Once the contract is deployed, you can use the deployed contract interface in Remix to call functions like transfer, balanceOf, etc.
 
-Contract Features
+##Authors Sukhneet kaur
 
-Functions
-
-Minting Tokens The mint function allows the creation of new tokens and assigns them to a specified address.
-
-function mint(address _to, uint256 _value) public;
-
-Parameters:
-
-_to: The address to receive the minted tokens. _value: The number of tokens to mint.
-
-Burning Tokens The burn function allows the destruction of tokens from a specified address, reducing the total supply.
-
-function burn(address _to, uint256 _value) public;
-
-Parameters:
-
-_to: The address from which tokens will be burned. _value: The number of tokens to burn.
-
-Usage Deployment To deploy the `MyToken` contract, you will need an Ethereum development environment such as Truffle, Hardhat, or Remix. Below is a basic example using Remix:
-
-Open Remix. 1.Create a new file and paste the `MyToken` contract code.
-
-2.Compile the contract.
-
-3.Deploy the contract using the "Deploy" button in Remix.
-
-Interacting with the Contract Once deployed, you can interact with the contract using web3.js, ethers.js, or directly via Remix.
-
-Mint Tokens To mint tokens, call the mint function with the recipient's address and the amount of tokens to mint.
-
-Example using Remix:
-
-1.Select the deployed `MyToken` contract.
-
-2.Select the mint function.
-
-3.Enter the recipient's address and the amount of tokens to mint.
-
-4.Click "Transact" to execute the transaction.
-
-Burn Tokens To burn tokens, call the burn function with the address from which to burn tokens and the amount to burn.
-
-Example using Remix:
-
-1.Select the deployed Nexa contract.
-
-2.Select the burn function.
-
-3.Enter the address from which to burn tokens and the amount to burn.
-
-4.Click "Transact" to execute the transaction.
-
-
-
+##License This project is licensed under the MIT License - see the LICENSE.md file for details
