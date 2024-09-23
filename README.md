@@ -1,7 +1,8 @@
 MyToken (NEXA)
 
 
-Project Title
+Project Title:
+
 MyToken (NEXA) - A basic ERC20-like token implemented in Solidity.
 
 Description:
@@ -10,7 +11,7 @@ This smart contract allows users to mint and burn tokens in a basic token system
 
 Getting Started
 
-Installing
+Installing:
 
 To get started with this contract, follow these steps:
 
@@ -75,13 +76,14 @@ contract MyToken {
 
 
 
-Modifications
+Modifications:
+
 
 1.You can modify tokenName, symbol, and initial totalSupply as per your project's requirements.
 
 2.Make sure to set up your development environment correctly depending on the platform you're using (Remix or Hardhat).
 
-Executing the Program
+Executing the Program:
 
 Using Remix IDE:
 
@@ -99,15 +101,19 @@ Using Hardhat:
 
 1.Compile the contract using Hardhat:
 
+
 npx hardhat compile
 
 2.Deploy the contract with Hardhat (create a deployment script first):
+
 
 npx hardhat run scripts/deploy.js --network <network_name>
 
 3.Interact with the deployed contract using a script or directly on the network.
 
-Help
+
+Help:
+
 
 Common Issues:
 
@@ -119,12 +125,12 @@ Commands: To view more details about Hardhat commands, run:
 
 npx hardhat help
 
-Authors
+Authors:
 
 Metacrafter Sukhneet
 
 Github Username:Sukhneet73
 
-License
+License:
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
